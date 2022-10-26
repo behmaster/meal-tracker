@@ -13,8 +13,8 @@ app.use(bodyParser.json());
 
 //controllers
 app.use("/meals", require("./controllers/meals"));
-app.use("/users", require("./controllers/users"));
-app.use("/authentication", require("./controllers/authentication"));
+// app.use("/users", require("./controllers/users"));
+// app.use("/authentication", require("./controllers/authentication"));
 
 //root
 app.get("/", (req, res) => {

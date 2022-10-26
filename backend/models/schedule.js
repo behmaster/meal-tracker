@@ -3,29 +3,29 @@ const { Model } = require('sequelize')
 
 module.exports = (sequelize, DataTypes) => {
 
-    class MealTime extends Model {
+    class Schedule extends Model {
 
-        static associate({ User, MealContent }){
-            MealTime.hasOne(MealContent, { foreignKey: 'mealcontent_id', as: 'mealContent' })
-            MealTime.belongsTo(User, { as: 'author', foreignKey: 'user_id' })
+        static associate({ User, Meal }){
+            Schedule.belongsTo(Meal, { as: 'meals', foreignKey: 'meal_id' })
+            Schedule.belongsTo(User, { as: 'users', foreignKey: 'user_id' })
         }
     }
-        MealTime.init({
-            mealTime_id: {
+        Schedule.init({
+            id: {
                 type: DataTypes.SMALLINT,
                 primaryKey: true,
                 autoIncrement: true
             },
-            mealContent_id: DataTypes.SMALLINT,
+            meal_id: DataTypes.SMALLINT,
             user_id: DataTypes.SMALLINT,
             date: DataTypes.DATE,
             mealCategory: DataTypes.STRING
         },{
             sequelize,
             underscored: true,
-            modelName: 'MealTime',
-            tableName: 'mealTime',
+            modelName: 'Schedule',
+            tableName: 'schedule',
             timestamps: false,
         })
-        return MealTime
+        return Schedule
     }

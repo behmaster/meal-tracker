@@ -4,14 +4,14 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
 
-    static associate({ MealContent, MealTime }) {
-      User.hasMany(MealTime, { as: 'author', foreignKey: 'user_id' })
-      User.hasMany(MealContent, { as: 'author', foreignKey: 'user_id' })
+    static associate({ Meal, Schedule }) {
+      User.hasMany(Meal, { as: 'user', foreignKey: 'user_id' })
+      User.hasMany(Schedule, { as: 'author', foreignKey: 'user_id' })
     }
 
   };
   User.init({
-    user_id: {
+    id: {
       type: DataTypes.SMALLINT,
       primaryKey: true,
       autoIncrement: true

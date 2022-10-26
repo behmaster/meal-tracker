@@ -3,15 +3,16 @@ const { Model } = require('sequelize')
 
 module.exports = (sequelize, DataTypes) => {
 
-    class MealContent extends Model {
+    class Meal extends Model {
 
-        static associate({ User, MealTime }){
-            MealContent.belongsTo(User, { as: 'author', foreignKey: 'user_id' })
-            MealContent.belongsTo(MealTime, { as: 'mealContent_id', foreignKey: 'mealContent_id' })
+        static associate({ User, Schedule, Meal_ingredient, Ingredient }){
+            Meal.belongsTo(User, { as: 'user', foreignKey: 'user_id' })
+            Meal.hasMany(Schedule, { foreignKey: 'meal_id', as: 'schedule' })
+            Meal.belongsToMany(Ingredient, { as: 'meal_ingredients', foreignKey: 'meal_id', through: Meal_ingredient })
         }
     }
-        MealContent.init({
-            mealContent_id: {
+        Meal.init({
+            id: {
                 type: DataTypes.SMALLINT,
                 primaryKey: true,
                 autoIncrement: true
@@ -21,14 +22,13 @@ module.exports = (sequelize, DataTypes) => {
                 allowNull: false,
             },
             user_id: DataTypes.SMALLINT,
-            ingredients: DataTypes.STRING,
             recipe: DataTypes.TEXT
         },{
             sequelize,
             underscored: true,
-            modelName: 'MealContent',
-            tableName: 'mealContent',
+            modelName: 'Meal',
+            tableName: 'meals',
             timestamps: false,
         })
-        return MealContent
+        return Meal
     }
