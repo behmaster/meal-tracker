@@ -28,7 +28,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      mealCategory: {
+      meal_category: {
         type: Sequelize.STRING,
         allowNull: false,
       }

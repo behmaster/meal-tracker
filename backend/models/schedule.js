@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
             meal_id: DataTypes.SMALLINT,
             user_id: DataTypes.SMALLINT,
             date: DataTypes.DATE,
-            mealCategory: DataTypes.STRING
+            meal_category: DataTypes.STRING
         },{
             sequelize,
             underscored: true,

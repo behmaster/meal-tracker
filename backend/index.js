@@ -13,7 +13,8 @@ app.use(bodyParser.json());
 
 //controllers
 app.use("/meals", require("./controllers/meals"));
-// app.use("/users", require("./controllers/users"));
+app.use("/schedule", require("./controllers/schedule"));
+app.use("/users", require("./controllers/users"));
 // app.use("/authentication", require("./controllers/authentication"));
 
 //root

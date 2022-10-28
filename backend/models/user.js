@@ -17,10 +17,10 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true
 
     },
-    firstName: DataTypes.STRING,
-    lastName: DataTypes.STRING,
+    first_name: DataTypes.STRING,
+    last_name: DataTypes.STRING,
     email: DataTypes.STRING,
-    passwordDigest: DataTypes.STRING
+    password_digest: DataTypes.STRING
   }, {
     sequelize,
     underscored: true,
