@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use("/meals", require("./controllers/meals"));
 app.use("/schedule", require("./controllers/schedule"));
 app.use("/users", require("./controllers/users"));
-// app.use("/authentication", require("./controllers/authentication"));
+app.use("/authentication", require("./controllers/authentication"));
 
 //root
 app.get("/", (req, res) => {

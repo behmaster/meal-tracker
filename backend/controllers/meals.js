@@ -75,8 +75,6 @@ router.delete('/:id', async (req, res) => {
 router.post('/:id/ingredients', async (req, res) => {
     const id = Number(req.params.id)
 
-    req.body.rant = req.body.rant ? true : false
-
     const meal = await Meal.findOne({
         where: { id: id }
     })
@@ -98,10 +96,10 @@ router.post('/:id/ingredients', async (req, res) => {
         id: id
     })
 
-    res.send({
-        ...ingredient.toJSON(),
-        name
-    })
+    // res.send({
+    //     ...ingredient.toJSON(),
+    //     name
+    // })
 })
 
 router.delete('/:id/ingredients/:ingredient_id', async (req, res) => {
