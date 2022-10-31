@@ -7,8 +7,8 @@ function SignUpForm() {
 	const navigate = useNavigate()
 
 	const [user, setUser] = useState({
-		firstName: '',
-		lastName: '',
+		first_name: '',
+		last_name: '',
 		email: '',
 		password: ''
 	})
@@ -36,8 +36,8 @@ function SignUpForm() {
 						<label htmlFor="firstName">First Name</label>
 						<input
 							required
-							value={user.firstName}
-							onChange={e => setUser({ ...user, firstName: e.target.value })}
+							value={user.first_name}
+							onChange={e => setUser({ ...user, first_name: e.target.value })}
 							className="form-control"
 							id="firstName"
 							name="firstName"
@@ -47,8 +47,8 @@ function SignUpForm() {
 						<label htmlFor="lastName">Last Name</label>
 						<input
 							required
-							value={user.lastName}
-							onChange={e => setUser({ ...user, lastName: e.target.value })}
+							value={user.last_name}
+							onChange={e => setUser({ ...user, last_name: e.target.value })}
 							className="form-control"
 							id="lastName"
 							name="lastName"
