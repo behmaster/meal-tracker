@@ -3,13 +3,13 @@ body {
     text-align: center;
 }
 
-h1 {
+h1, h3 {
     text-align: center;
     color: rgb(114,165,66);
 }
 
-h2 {
-    color: rgb(0,123,255);
+h2, h4, a {
+    color: rgb(114,165,66);
 }
 
 main {
@@ -17,6 +17,10 @@ main {
     margin-left: 20px;
     padding: 20px;
     background-color: white;
+}
+
+box {
+    padding: 10em;
 }
 
 nav {

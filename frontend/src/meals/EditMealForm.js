@@ -60,7 +60,7 @@ function EditMealForm() {
 						name="recipe"
 					/>
 				</div>
-				
+				<a className="btn btn-secondary" onClick={() => navigate(`/meals/${meal.id}`)}>Go Back</a>
 				<input className="btn btn-primary" type="submit" value="Save" />
 			</form>
 		</main>

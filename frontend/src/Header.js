@@ -35,7 +35,12 @@ function Header() {
             <ul>
                 <li>
                     <a href="#" onClick={() => navigate("/")}>
-                        Weekly Planner
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onClick={() => navigate("/schedule")}>
+                        Schedule
                     </a>
                 </li>
                 <li>

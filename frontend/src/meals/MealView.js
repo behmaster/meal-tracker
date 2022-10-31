@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TextTruncate from 'react-text-truncate';
+import Container from 'react-bootstrap/Container'
 
 function MealIndex() {
   const navigate = useNavigate();
@@ -20,19 +21,19 @@ function MealIndex() {
 
   let showMeals = meals.map((meal) => {
     return (
-      <div className="col-sm-6" key={meal.id}>
-        <h3>
-          <a href="#" onClick={() => navigate(`/meals/${meal.id}`)}>
+      <div style={{padding: 1.5 + 'em'}} className="col-sm-6" key={meal.id}>
+        <h4>
+          <a href={`/meals/${meal.id}`}>
             {meal.name}
           </a>
-        </h3>
+        </h4>
         <TextTruncate line={3} element="span" truncateText="…" text={meal.recipe} />
       </div>
     );
   });
 
   return (
-    <main>
+    <main >
       <h1>Meal View</h1>
       <div className="row">{showMeals}</div>
     </main>
