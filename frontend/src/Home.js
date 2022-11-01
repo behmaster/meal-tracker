@@ -1,7 +1,7 @@
 function Home() {
     return(
         <main>
-            <h2>Wecome to Meal Tracker!</h2>
+            <h2>Welcome to Meal Tracker!</h2>
             {/* <img height="300" width="500" src="http://localhost:4000/images/plate2.png" alt="plate2" />
             <img height="300" width="500" src="http://localhost:4000/images/plate4.avif" alt="plate2" />
             <img height="300" width="500" src="http://localhost:4000/images/plate3.png" alt="plate3" />

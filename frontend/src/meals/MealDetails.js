@@ -31,7 +31,7 @@ async function deleteMeal() {
 
   return (
     <>
-      <div className="col-sm-6" key={meal.id}>
+      <div class="meal-details" key={meal.id}>
         <h3>{meal.name}</h3>
         <p className="text-center">{meal.recipe}</p>
         <a className="btn btn-secondary" href={`/meals`}>Go Back</a>

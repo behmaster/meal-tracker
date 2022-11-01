@@ -27,7 +27,7 @@ function MealIndex() {
             {meal.name}
           </a>
         </h4>
-        <TextTruncate line={3} element="span" truncateText="…" text={meal.recipe} />
+        <TextTruncate line={4} element="span" truncateText="…" text={meal.recipe} />
       </div>
     );
   });

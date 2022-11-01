@@ -9,6 +9,21 @@ const config = require(__dirname + '/../config/config.js')[env];
 const db = {};
 
 let sequelize;
+
+
+// const devConfig = `postgresql://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@${process.env.c}:${process.env.DB_PORT}/${process.env.DB_DATABASE}`;
+// const proConfig = process.env.DATABASE_URL; //heroku addons
+// sequelize = new Sequelize({
+//     connectionString:
+//       process.env.DATABASE_URL
+//   });
+
+// sequelize = new Sequelize({
+//   connectionString:
+//     process.env.NODE_ENV === "production" ? proConfig : devConfig,
+// });
+
+
 if (config.use_env_variable) {
   sequelize = new Sequelize(process.env[config.use_env_variable], config);
 } else {

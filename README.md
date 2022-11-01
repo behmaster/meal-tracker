@@ -1,14 +1,3 @@
-          <Route exact path="/meals/:id" component={MealDetails} />
-          <Route exact path="/meals/:id/edit" component={EditMealForm} />
-          <Route exact path="/schedule" component={ScheduleIndex} />
-          <Route exact path="/schedule/new" component={NewScheduleForm} />
-          <Route exact path="/schedule/:id" component={ScheduleDetails} />
-          <Route exact path="/schedule/:id/edit" component={EditScheduleForm} />
-          <Route path="/" component={Error404} />
-
-            // "proxy": "http://localhost:4000",
-          
-
           <div id="container" className="container-fluid">
           <h3>Add Ingredients</h3>
           <Button onclick="addNewRow()" className="btn btn-primary">
@@ -91,29 +80,3 @@
           </Table>
           <Button variant="primary" onClick={addNewRow} >Add New Row</Button> 
         </div>
-
-
-
-
-
-
-         let placeActions = null;
-
-  console.log(currentUser?.role);
-
-  if (currentUser?.role === "admin") {
-    placeActions = (
-      <>
-         <a className="btn btn-warning" onClick={editPlace}>
-          Edit
-        </a>
-        <button type="submit" className="btn btn-danger" onClick={deletePlace}>
-          Delete
-        </button> 
-      </>
-    );
-  }
-
-      <main>
-       <div className="row">{showMeal}</div>
-     </main>

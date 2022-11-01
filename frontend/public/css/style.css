@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Roboto+Slab:wght@500&family=Source+Sans+Pro:wght@200;400;600&display=swap");
+
+* {
+    font-family: Source Sans Pro;
+}
+
 body {
-    background-color: lightblue;
+    background-color: rgb(213, 242, 222);
     text-align: center;
 }
 
@@ -8,24 +14,32 @@ h1, h3 {
     color: rgb(114,165,66);
 }
 
-h2, h4, a {
+h2, h4, h4 a {
     color: rgb(114,165,66);
+    text-align: center;
+}
+
+h4 a:hover {
+    color: hsl(91, 43%, 35%);
+    text-decoration: none;
 }
 
 main {
-    margin-right: 20px;
-    margin-left: 20px;
     padding: 20px;
-    background-color: white;
+    background-color: hsl(91, 43%, 95%);
 }
 
-box {
-    padding: 10em;
+.meal-details {
+    padding: 1em 5em 0em 5em;
 }
 
 nav {
     background-color: rgb(114, 165, 66);
-    padding: 10px;
+    padding: 5px 0px 5px 0px;
+}
+
+div a, div input {
+    margin: 5px
 }
 
 nav ul {
@@ -44,7 +58,7 @@ nav a {
 }
 
 nav a:hover {
-    color: rgb(159, 213, 177);
+    color: rgb(213, 242, 222);
     text-decoration: none;
 }
 
@@ -59,3 +73,7 @@ form {
 .border {
     border: 1px solid gray;
 }
+
+/* * {
+    background-color: rgb(213, 242, 222);
+} */
