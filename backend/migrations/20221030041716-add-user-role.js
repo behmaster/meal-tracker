@@ -5,10 +5,10 @@ module.exports = {
     return queryInterface.addColumn('users', 'role', {
         type: Sequelize.DataTypes.ENUM,
         values: [
-          'reviewer',
+          'user',
           'admin',
         ],
-        defaultValue: 'reviewer'
+        defaultValue: 'user'
       })
   },
 
