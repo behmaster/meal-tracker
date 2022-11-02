@@ -9,7 +9,7 @@ This is a PERN (PostgresSQL, Express, React, Node JS) full stack web application
 
 ## Technical Information
 The following entity-relationship diagram was developed to map out the variables and their relationships:
-![ERD](./frontend/public/images/Meal-tracker ERD.png)
+![ERD](./frontend/public/images/Meal-tracker-ERD.png)
 
 ## Known Issues
 11-01-2022-- The schedule and ingredient variables and views are still being built out. Nutrition data will need to be pulled from an API. 
