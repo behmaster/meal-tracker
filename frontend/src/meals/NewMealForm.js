@@ -24,7 +24,7 @@ function NewMealForm() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    await fetch("http://localhost:4000/meals", {
+    await fetch("https://meal-tracker--backend.herokuapp.com/meals", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

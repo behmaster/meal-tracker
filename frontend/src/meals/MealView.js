@@ -10,7 +10,7 @@ function MealIndex() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:4000/meals`);
+      const response = await fetch(`https://meal-tracker--backend.herokuapp.com/meals`);
       const resData = await response.json();
       setMeals(resData);
     };

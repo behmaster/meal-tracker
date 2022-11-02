@@ -14,7 +14,7 @@ function EditMealForm() {
 
     useEffect(() => {
         const fetchData = async () => {
-          const response = await fetch(`http://localhost:4000/meals/${id}`);
+          const response = await fetch(`https://meal-tracker--backend.herokuapp.com/meals/${id}`);
           const resData = await response.json();
           setMeal(resData);
         };
@@ -24,7 +24,7 @@ function EditMealForm() {
       async function handleSubmit(e) {
 		e.preventDefault()
 
-		await fetch(`http://localhost:4000/meals/${meal.id}`, {
+		await fetch(`https://meal-tracker--backend.herokuapp.com/meals/${meal.id}`, {
 			method: 'PUT',
 			headers: {
 				'Content-Type': 'application/json'

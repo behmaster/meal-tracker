@@ -12,7 +12,7 @@ function Schedule() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch(`http://localhost:4000/schedule`);
+      const response = await fetch(`https://meal-tracker--backend.herokuapp.com/schedule`);
       const resData = await response.json();
       setSchedule(resData);
     };

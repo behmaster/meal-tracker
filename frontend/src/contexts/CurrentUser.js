@@ -11,7 +11,7 @@ function CurrentUserProvider({ children }){
     useEffect(() => {
 
         const getLoggedInUser = async () => {
-            let response = await fetch('http://localhost:4000/authentication/profile', { 
+            let response = await fetch('https://meal-tracker--backend.herokuapp.com/authentication/profile', { 
                 headers: { 
                     'Authorization': `Bearer ${localStorage.getItem('token')}`
                 }
