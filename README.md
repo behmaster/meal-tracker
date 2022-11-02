@@ -13,3 +13,4 @@ The following entity-relationship diagram was developed to map out the variables
 
 ## Known Issues
 11-01-2022-- The schedule and ingredient variables and views are still being built out. Nutrition data will need to be pulled from an API. 
+
